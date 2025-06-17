@@ -1,3 +1,4 @@
+
 public class Node {
 
     private int data;
@@ -20,7 +21,7 @@ class VirusTree {
     public VirusTree() {
         root = new Node(10);
         root.left = new Node(5);
-        root.right = new Node(8); 
+        root.right = new Node(8);
         root.left.left = new Node(2);
         root.left.right = new Node(12);
     }
@@ -34,7 +35,7 @@ class VirusTree {
             return;
         }
 
-        System.out.printf("%s", node.getData());
+        System.out.printf("%s ", node.getData());
         preorderHelper(node.left);
         preorderHelper(node.right);
     }
@@ -55,6 +56,7 @@ class VirusTree {
         return isBST(node.left, min, node.getData())
                 && isBST(node.right, node.getData(), max);
     }
+
 }
 
 class Main {
@@ -62,7 +64,7 @@ class Main {
     public static void main(String[] args) {
         VirusTree tree = new VirusTree();
         tree.preorderTraversal();
-        System.out.println();
         System.out.println(tree.checkBST());
     }
 }
+
